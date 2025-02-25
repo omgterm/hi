@@ -1283,7 +1283,6 @@ do
         end);
 
         Library:GiveSignal(InputService.InputBegan:Connect(function(Input)
-            if not gameProcessed then return end
             if (not Picking) then
                 if KeyPicker.Mode == 'Toggle' then
                     local Key = KeyPicker.Value;
@@ -1316,9 +1315,9 @@ do
             end;
         end))
 
-        Library:GiveSignal(InputService.InputEnded:Connect(function(Input)
+        Library:GiveSignal(InputService.InputEnded:Connect(function(Input, gameProcess)
+            if not gameProcess then return end
             if (not Picking) then
-                print(Input)
                 KeyPicker:Update();
             end;
         end))
