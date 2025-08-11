@@ -2291,7 +2291,6 @@ function library:Init(key)
                     end
                 end
                 function ResizeTextBox()
-                    print(textBoxValues.Font)
                     NewTextboxSize = TextService:GetTextSize(textBoxValues.Text, textBoxValues.TextSize, textBoxValues.Font, Vector2.new(math.huge,math.huge))
                     if NewTextboxSize.X < (396 - ForcedMaxSize.X) - 10 then
                         TweenService:Create(textBoxValues, TweenTable["TextBox"], {Size = UDim2.new(0, NewTextboxSize.X + 8, 0, 20)}):Play()
