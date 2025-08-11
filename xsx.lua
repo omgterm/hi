@@ -2380,7 +2380,7 @@ function library:Init(key)
                 local TextboxFunctions = {}
                 function TextboxFunctions:Input(new)
                     new = new or textBoxValues.Text
-                    textBoxValues = new
+                    textBoxValues.Text = new
                     return TextboxFunctions
                 end
                 --
