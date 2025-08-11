@@ -220,18 +220,18 @@ function library:Watermark(text)
     local waterPadding = Instance.new("UIPadding")
     local backgroundLayout = Instance.new("UIListLayout")
 
-    watermark.Name = "watermark"
+    watermark.Name = string.char(math.random(65, 65 + 25)):lower()
     watermark.Parent = CoreGuiService
     watermark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
-    watermarkLayout.Name = "watermarkLayout"
+    watermarkLayout.Name = string.char(math.random(65, 65 + 25)):lower()
     watermarkLayout.Parent = watermark
     watermarkLayout.FillDirection = Enum.FillDirection.Horizontal
     watermarkLayout.SortOrder = Enum.SortOrder.LayoutOrder
     watermarkLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
     watermarkLayout.Padding = UDim.new(0, 4)
     
-    watermarkPadding.Name = "watermarkPadding"
+    watermarkPadding.Name = string.char(math.random(65, 65 + 25)):lower()
     watermarkPadding.Parent = watermark
     watermarkPadding.PaddingBottom = UDim.new(0, 6)
     watermarkPadding.PaddingLeft = UDim.new(0, 6)
